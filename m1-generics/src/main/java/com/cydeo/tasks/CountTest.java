@@ -13,18 +13,17 @@ public class CountTest {
 
     }
 
-    private static <T> int countIf(List<T> c, UnaryPredicate<T> p){
+    private static <T> int countIf(List<T> c, UnaryPredicate<T> p) {
 
         int count = 0;
 
         for (T elem : c) {
-            if(p.test(elem)){
+            if (p.test(elem)) {
                 ++count;
             }
-            return count;
+
         }
-
+        return count;
     }
-
 
 }
