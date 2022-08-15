@@ -13,9 +13,9 @@ public class SwapValues {
         System.out.println(Arrays.toString(a));
     }
 
-    private static void swap(Integer[] a, int i, int j){
+    private static <T> void swap(T[] a, int i, int j){
 
-        Integer temp = a[i];
+        T temp = a[i];
         a[i] = a[j];
         a[j] = temp;
 
