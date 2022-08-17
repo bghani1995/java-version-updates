@@ -13,7 +13,6 @@ public class FunctionalInterface {
         };
 
         System.out.println("//*************PREDICATE***************//");
-
         Predicate<Integer> lesserThan = i -> i<18;//Accepting Integer object and returning boolean
         System.out.println(lesserThan.test(20));//Call method from class
 
@@ -36,6 +35,7 @@ public class FunctionalInterface {
         System.out.println("//*************SUPPLIER***************//");
         Supplier<Double> randomValue = () -> Math.random();
         randomValue.get();
+        System.out.println(randomValue.get());
 
 
 
