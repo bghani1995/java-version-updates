@@ -1,6 +1,9 @@
-package com.cydeo;
+package com.cydeo.task;
 
-import javax.print.attribute.standard.OrientationRequested;
+import com.cydeo.Color;
+import com.cydeo.task.Orange;
+import com.cydeo.task.OrangeFormatter;
+
 import java.util.ArrayList;
 import java.util.List;
 
