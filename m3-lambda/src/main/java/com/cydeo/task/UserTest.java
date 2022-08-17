@@ -23,8 +23,6 @@ public class UserTest {
         printName(users, user -> user.getLastName().startsWith("E"));
 
 
-
-
         }
 
     private static void printName(List<User> users, Predicate<User> p){
