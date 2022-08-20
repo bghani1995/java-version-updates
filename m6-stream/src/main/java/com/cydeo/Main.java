@@ -19,6 +19,16 @@ public class Main {
         List<String> courseList = Arrays.asList("Java", "Spring", "Agile");
         Stream<String> courseStream2 = courseList.stream();
 
+        List<Course> myCourse = Arrays.asList(
+                new Course("Java", 100),
+                new Course("Data Structures", 101),
+                new Course("MS", 102)
+        );
+
+        Stream<Course> myCourseStream = myCourse.stream();
+
+
+
 
 
 
