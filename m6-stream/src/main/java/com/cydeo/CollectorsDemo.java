@@ -46,6 +46,10 @@ public class CollectorsDemo {
         System.out.println(sum);
 
         System.out.println("----------Counting()---------");// Returns a Collector that counts the number of elements
+        Long evenCount = numbers.stream()
+                .filter(x -> x%2==0)
+                .collect(Collectors.counting());
+        System.out.println(evenCount);
 
 
 
