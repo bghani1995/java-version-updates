@@ -43,7 +43,7 @@ public class DishTask {
         //Sorted reverse order
         DishData.getAll().stream()
                 .filter(dish -> dish.getCalories()<400)
-                .sorted(comparing(Dish::getCalories))
+                .sorted(comparing(Dish::getCalories).reversed())
                 .map(Dish::getName)
                 .forEach(System.out::println);
 
