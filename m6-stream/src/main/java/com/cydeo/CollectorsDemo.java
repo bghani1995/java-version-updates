@@ -62,6 +62,11 @@ public class CollectorsDemo {
                 .collect(Collectors.joining(","));
         System.out.println(str);
 
+        System.out.println("----------partitioningBy()---------");// Is used to partition a stream of objects (or a set of elements) based on a given predicate)
+        Map<Boolean, List<Dish>> veggieDish = DishData.getAll().stream()
+                .collect(Collectors.partitioningBy(Dish::isVegetarian));
+        System.out.println(veggieDish);
+
 
 
 
