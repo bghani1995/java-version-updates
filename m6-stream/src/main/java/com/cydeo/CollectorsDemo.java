@@ -40,6 +40,12 @@ public class CollectorsDemo {
                 .collect(Collectors.toMap(Dish::getName, Dish::getCalories));
         System.out.println(dishMap);
 
+        System.out.println("----------summingInt(ToIntFunction)---------");// Returns a Collector that produces the sum of an Integer-valued func
+        Integer sum = DishData.getAll().stream()
+                .collect(Collectors.summingInt(Dish::getCalories));
+        System.out.println(sum);
+
+
 
 
 
