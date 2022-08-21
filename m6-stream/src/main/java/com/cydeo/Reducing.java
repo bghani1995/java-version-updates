@@ -1,5 +1,8 @@
 package com.cydeo;
 
+import com.cydeo.task.Dish;
+import com.cydeo.task.DishData;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,6 +20,14 @@ public class Reducing {
         //Functional Programming
         int result = numbers.stream().reduce(0, (a,b) -> a+b);
         System.out.println(result);
+
+        //Find  total calories from Dish
+       int calTotal = DishData.getAll().stream()
+                .map(Dish::getCalories)
+                .reduce((a,b) -> a+b)
+               .get();
+
+        System.out.println(calTotal);
 
     }
 }
