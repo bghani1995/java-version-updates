@@ -3,7 +3,10 @@ package com.cydeo;
 import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 public class FindingMatching {
 
@@ -31,6 +34,19 @@ public class FindingMatching {
         System.out.println(dish2.get());
 
         //PARALLEL STREAMS (Async)
+        System.out.println(IntStream.range(0,100).parallel().findAny());
+        System.out.println(IntStream.range(0,100).parallel().findFirst());
+
+        List<String> list1 = Arrays.asList("Johnny", "David", "Jack", "Duke", "Jill", "Danny", "Julia", "Jenish", "Divyaa");
+        List<String> list2 = Arrays.asList("Johnny", "David", "Jack", "Duke", "Jill", "Danny", "Julia", "Jenish", "Divyaa");
+
+        Optional<String> findFirst = list1.parallelStream().filter(s -> s.startsWith("D")).findFirst();
+        Optional<String> findAny = list1.parallelStream().filter(s -> s.startsWith("J")).findAny();
+
+        System.out.println(findFirst);
+        System.out.println(findAny);
+
+
 
 
 
