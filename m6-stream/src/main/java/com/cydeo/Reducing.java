@@ -3,8 +3,10 @@ package com.cydeo;
 import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
 
+import javax.swing.text.html.Option;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class Reducing {
 
@@ -24,10 +26,19 @@ public class Reducing {
         //Find  total calories from Dish
        int calTotal = DishData.getAll().stream()
                 .map(Dish::getCalories)
-                .reduce((a,b) -> a+b)
+                //.reduce((a,b) -> a+b)
+               .reduce(Integer::sum)
                .get();
-
         System.out.println(calTotal);
+
+        //MAX & MIN
+       Optional<Integer> min = numbers.stream(). reduce(Integer::min);
+       Optional<Integer> max = numbers.stream(). reduce(Integer::max);
+       Optional<Integer> sum2 = numbers.stream(). reduce(Integer::sum);
+
+        System.out.println("Min: " + min.get());
+        System.out.println("Max: " + max.get());
+        System.out.println("Sum: " + sum2.get());
 
     }
 }
