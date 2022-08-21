@@ -2,6 +2,7 @@ package com.cydeo;
 
 import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
+import com.cydeo.task.Type;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -66,6 +67,11 @@ public class CollectorsDemo {
         Map<Boolean, List<Dish>> veggieDish = DishData.getAll().stream()
                 .collect(Collectors.partitioningBy(Dish::isVegetarian));
         System.out.println(veggieDish);
+
+        System.out.println("----------groupingBy()---------");// Is used for grouping objects by some property and storing results in a Map instance
+       Map<Type, List<Dish>> dishType = DishData.getAll().stream()
+                .collect(Collectors.groupingBy(Dish::getType));
+        System.out.println(dishType);
 
 
 
