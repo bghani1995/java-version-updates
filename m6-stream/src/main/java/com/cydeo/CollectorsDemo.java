@@ -51,6 +51,13 @@ public class CollectorsDemo {
                 .collect(Collectors.counting());
         System.out.println(evenCount);
 
+        System.out.println("----------averagingInt(ToIntoFunction)---------");// Returns the average of the integers passed values
+        Double calorieAverage =  DishData.getAll().stream()
+                .collect(Collectors.averagingInt(Dish::getCalories));
+        System.out.println(calorieAverage);
+
+
+
 
 
 
