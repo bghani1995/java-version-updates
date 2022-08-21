@@ -20,6 +20,13 @@ public class CollectorsDemo {
         System.out.println(numberSet);
 
 
+        System.out.println("----------toList()---------");// Returns a Collector interface that gathers the input data into a new list
+        List<Integer> numbersList2 = numbers.stream()
+                .filter(x -> x%2==0)
+                .collect(Collectors.toList());
+        System.out.println(numbersList2);
+
+
 
 
 
