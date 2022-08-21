@@ -1,5 +1,8 @@
 package com.cydeo;
 
+import com.cydeo.task.Dish;
+import com.cydeo.task.DishData;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -31,6 +34,13 @@ public class CollectorsDemo {
                 .filter(x -> x%2==0)
                 .collect(Collectors.toList());
         System.out.println(numbersSet2);
+
+        System.out.println("----------toMap(Function, Function)---------");// Returns Collector interface that gathers the input data into a new Map
+        Map<String, Integer> dishMap = DishData.getAll().stream()
+                .collect(Collectors.toMap(Dish::getName, Dish::getCalories));
+        System.out.println(dishMap);
+
+
 
 
 
