@@ -56,6 +56,12 @@ public class CollectorsDemo {
                 .collect(Collectors.averagingInt(Dish::getCalories));
         System.out.println(calorieAverage);
 
+        System.out.println("----------joining()---------");// Used to join various elements of a character or string array into a single object
+        List<String> courses = Arrays.asList("Java", "JS", "TS");
+        String str = courses.stream()
+                .collect(Collectors.joining(","));
+        System.out.println(str);
+
 
 
 
