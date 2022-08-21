@@ -31,7 +31,7 @@ public class Reducing {
                .get();
         System.out.println(calTotal);
 
-        //MAX & MIN
+        System.out.println("----------MIN & MAX---------");
        Optional<Integer> min = numbers.stream(). reduce(Integer::min);
        Optional<Integer> max = numbers.stream(). reduce(Integer::max);
        Optional<Integer> sum2 = numbers.stream(). reduce(Integer::sum);
@@ -39,6 +39,11 @@ public class Reducing {
         System.out.println("Min: " + min.get());
         System.out.println("Max: " + max.get());
         System.out.println("Sum: " + sum2.get());
+
+        System.out.println("----------COUNT---------");//Counts number of objects in stream
+        long dishCount = DishData.getAll().stream().count();
+        System.out.println(dishCount);
+
 
     }
 }
