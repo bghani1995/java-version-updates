@@ -45,6 +45,10 @@ public class CollectorsDemo {
                 .collect(Collectors.summingInt(Dish::getCalories));
         System.out.println(sum);
 
+        System.out.println("----------Counting()---------");// Returns a Collector that counts the number of elements
+
+
+
 
 
 
