@@ -1,9 +1,6 @@
 package com.cydeo.java9;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class FactoryMethodsDemo {
 
@@ -19,6 +16,14 @@ public class FactoryMethodsDemo {
 
         //Creating unmodifiable Set after Java9
         Set<String> myProducts = Set.of("Milk", "Bread", "Cheese");
+
+        //Creating unmodifiable Map after Java9
+        Map<String, Integer> myCart = Map.ofEntries(
+                Map.entry("Samsung TV", 1),
+                Map.entry("PS5", 1),
+                Map.entry("Chair", 5)
+        );
+
 
 
 
