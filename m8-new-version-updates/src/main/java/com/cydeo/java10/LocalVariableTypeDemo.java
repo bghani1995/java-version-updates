@@ -6,8 +6,9 @@ import java.util.List;
 public class LocalVariableTypeDemo {
 
     public static void main(String[] args) {
-
         //Type Inference
+
+
         //Var - Local Variable only, not for instance variable
         var str = "Cydeo";
         var number = 5;
